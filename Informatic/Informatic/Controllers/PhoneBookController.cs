@@ -17,29 +17,35 @@ namespace Informatic.Controllers
 
         }
 
-        // GET api/<controller>
-        [HttpGet]
-        public List<PhoneBook> Get()
+        // GET api/<controller>/id/pram/value
+        [HttpGet("{UserId}/{Param}/{Value}")]
+        public List<PhoneBook> Get(string UserId,string param,string value)
         {
             List<PhoneBook> list = (from c in context.PhoneBook
-                               select c).ToList();
-
-            return list ;
+                                    where c.UserID == UserId
+                                    select c).ToList();
+            var property = new PhoneBook().GetType().GetProperty(param);
+            if (property != null)
+            {
+                list=list.Where(x => property.GetValue(x).ToString() == value).ToList();
+                //list = list.Where(x => x.PhoneBookID == value).ToList();
+                return list;
+            }
+            else
+                return null;
         }
 
         // GET api/<controller>/id
         [HttpGet("{UserId}")]
-        public PhoneBook Get(string UserId)
+        public List<PhoneBook> Get(string UserId)
         {
             List<PhoneBook> list = (from c in context.PhoneBook
                                     where c.UserID==UserId
                                     select c).ToList();
 
-            if (list != null)
-                return list.FirstOrDefault();
-            else
-                return null;
+            return list;
         }
+
 
         // POST api/<controller>
         [HttpPost]
