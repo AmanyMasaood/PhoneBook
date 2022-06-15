@@ -21,7 +21,7 @@ namespace Informatic.Controllers
         }
 
         // GET api/<controller>
-        [HttpGet]
+        [HttpPost]
         public bool Post(string Name,string Password)
         {
             List<User> list = (from c in context.User
@@ -35,7 +35,7 @@ namespace Informatic.Controllers
 
         // POST api/<controller>
         [HttpPost]
-        //[ActionName("AddUser")]
+        [ActionName("AddUser")]
         public void Post(User user)
         {
             if (user != null)
