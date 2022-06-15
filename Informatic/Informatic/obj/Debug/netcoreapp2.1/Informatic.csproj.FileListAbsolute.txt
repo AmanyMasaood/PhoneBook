@@ -1,0 +1,14 @@
+D:\interviews\informatic\Informatic\Informatic\bin\Debug\netcoreapp2.1\Informatic.deps.json
+D:\interviews\informatic\Informatic\Informatic\bin\Debug\netcoreapp2.1\Informatic.runtimeconfig.json
+D:\interviews\informatic\Informatic\Informatic\bin\Debug\netcoreapp2.1\Informatic.runtimeconfig.dev.json
+D:\interviews\informatic\Informatic\Informatic\bin\Debug\netcoreapp2.1\Informatic.dll
+D:\interviews\informatic\Informatic\Informatic\bin\Debug\netcoreapp2.1\Informatic.pdb
+D:\interviews\informatic\Informatic\Informatic\obj\Debug\netcoreapp2.1\Informatic.csprojAssemblyReference.cache
+D:\interviews\informatic\Informatic\Informatic\obj\Debug\netcoreapp2.1\Informatic.csproj.CoreCompileInputs.cache
+D:\interviews\informatic\Informatic\Informatic\obj\Debug\netcoreapp2.1\Informatic.RazorAssemblyInfo.cache
+D:\interviews\informatic\Informatic\Informatic\obj\Debug\netcoreapp2.1\Informatic.RazorAssemblyInfo.cs
+D:\interviews\informatic\Informatic\Informatic\obj\Debug\netcoreapp2.1\Informatic.AssemblyInfoInputs.cache
+D:\interviews\informatic\Informatic\Informatic\obj\Debug\netcoreapp2.1\Informatic.AssemblyInfo.cs
+D:\interviews\informatic\Informatic\Informatic\obj\Debug\netcoreapp2.1\Informatic.RazorTargetAssemblyInfo.cache
+D:\interviews\informatic\Informatic\Informatic\obj\Debug\netcoreapp2.1\Informatic.dll
+D:\interviews\informatic\Informatic\Informatic\obj\Debug\netcoreapp2.1\Informatic.pdb
