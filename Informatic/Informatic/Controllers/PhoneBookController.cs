@@ -27,6 +27,20 @@ namespace Informatic.Controllers
             return list ;
         }
 
+        // GET api/<controller>/id
+        [HttpGet("{id}")]
+        public PhoneBook Get(string id)
+        {
+            List<PhoneBook> list = (from c in context.PhoneBook
+                                    where c.PhoneBookID==id
+                                    select c).ToList();
+
+            if (list != null)
+                return list.FirstOrDefault();
+            else
+                return null;
+        }
+
         // POST api/<controller>
         [HttpPost]
         public void Post(PhoneBook book)
