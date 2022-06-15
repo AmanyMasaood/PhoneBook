@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Informatic.Models;
@@ -17,25 +17,11 @@ namespace Informatic.Controllers
 
         }
 
-        // GET api/<controller>/id
-        [HttpGet"{id}"]
-        public List<PhoneBook> Get( string id)
-        {
-            List<PhoneBook> list = (from c in context.PhoneBooks
-                                where c.PhoneBookID==id
-                               select c).ToList();
-            
-            if(list!=null)
-            return list.FirstOrDefault() ;
-            else 
-            return null;
-        }
-        
         // GET api/<controller>
         [HttpGet]
         public List<PhoneBook> Get()
         {
-            List<PhoneBook> list = (from c in context.PhoneBooks
+            List<PhoneBook> list = (from c in context.PhoneBook
                                select c).ToList();
 
             return list ;
@@ -47,9 +33,9 @@ namespace Informatic.Controllers
         {
             if (book != null)
             {
-                if (context.PhoneBooks.Contains(book))
+                if (context.PhoneBook.Contains(book))
                 {
-                    PhoneBook item = context.PhoneBooks.Find(book);
+                    PhoneBook item = context.PhoneBook.Find(book);
                     item.BookName = book.BookName;
                     item.Comment = book.Comment;
 
@@ -57,7 +43,7 @@ namespace Informatic.Controllers
                 }
                 else
                 {
-                    context.PhoneBooks.Add(book);
+                    context.PhoneBook.Add(book);
                     context.SaveChangesAsync();
                 }
             }
@@ -69,7 +55,7 @@ namespace Informatic.Controllers
         {
             if (book != null)
             {
-                context.PhoneBooks.Remove(book);
+                context.PhoneBook.Remove(book);
                 context.SaveChangesAsync();
             }
         }
