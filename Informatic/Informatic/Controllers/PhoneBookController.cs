@@ -28,11 +28,11 @@ namespace Informatic.Controllers
         }
 
         // GET api/<controller>/id
-        [HttpGet("{id}")]
-        public PhoneBook Get(string id)
+        [HttpGet("{UserId}")]
+        public PhoneBook Get(string UserId)
         {
             List<PhoneBook> list = (from c in context.PhoneBook
-                                    where c.PhoneBookID==id
+                                    where c.UserID==UserId
                                     select c).ToList();
 
             if (list != null)
